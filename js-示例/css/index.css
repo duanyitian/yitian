@@ -1,0 +1,295 @@
+  *{
+        font-family: xh;
+    }
+    .problemContent{
+        border-style: solid;
+        border-width: 2px;
+        padding: 10px;
+    }
+
+    #problem table{
+        border-collapse: separate;
+        border-spacing: 10px;
+    }
+
+    .problemNameLabel{
+        width: 135px;
+        padding: 5px;
+        margin: 5px;
+        border-style: solid;
+        border-width: 1px;
+        float: left;
+    }
+
+    .problemName{
+        padding: 0px 0px 10px 10px;
+    }
+
+    #problem{
+        margin: auto;
+        width: 90%;
+    }
+    .customList ,.aloneLeft ,.reward{
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #606266;
+    }
+    .custom ,.aloneRight{
+        float: left;
+        width: 92%;
+        margin-bottom: 40px;
+    }
+    .customName ,.customGoods ,.customBads ,.aloneGoods ,.aloneBads{
+        border:1px solid #F0F0F0;
+        border-bottom: none;
+        padding: 20px;
+    }
+    .customBads ,.aloneBads{
+       border:1px solid #F0F0F0;
+       padding: 20px;
+    }
+    .addAssess{
+        margin-top: 20px;
+    }
+    .customName p ,.customGoods p ,.customBads p ,.aloneGoods p ,.aloneBads p{
+        padding-bottom: 10px;
+    }
+    .customName input ,.customGoods input ,.customBads input ,.aloneGoods input ,.aloneBads input{
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        border: 1px solid #dcdfe6;
+        text-indent: 1rem;
+    }
+    ::-webkit-input-placeholder{/*Webkit browsers*/
+    color:lightgrey;
+    font-size:14px;
+    }
+    :-moz-placeholder{/*Mozilla Firefox 4 to 8*/
+       color:lightgrey;
+       font-size:14px;
+    }
+    ::moz-placeholder{/*Mozilla Firefox 19+*/
+       color:lightgrey;
+       font-size:14px;
+    }
+    :-ms-input-placeholder{/*Internet Explorer 10+*/
+        color:lightgrey;
+        font-size:14px;
+    }
+    .newPraise ,.badPraise ,.clickPraise ,.Touch{
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .inputList ,.importList ,.modifyList ,.pagList{
+        clear: both;
+        margin-bottom: 30px;
+    }
+    .inputList span ,.importList span ,.modifyList span ,.pagList span{
+        width: 80px;
+        margin-right: 10px;
+    }
+    .inputList input ,.importList input ,.modifyList input ,.pagList input{
+        width: 75%;
+        height: 45px;
+        border: 1px solid #eee;
+    }
+    .addLabel ,.addTab ,.addAppraise ,.addTag{
+        text-decoration:underline;
+        color: #ff5c5c;
+        margin-left: 66px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .conserve :nth-of-type(1) ,.keep :nth-of-type(1){
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #535353;
+        text-align: center;
+        float: left;
+        margin-left: 18%;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .conserve :nth-of-type(2) ,.keep :nth-of-type(2) ,.addAssess{
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        background: #535353;
+        color: #ffffff;
+        text-align: center;
+        float: left;
+        margin-right: 18%;
+        cursor: pointer;
+    }
+
+   .goodsData ,.badsData ,.evaluateData ,.assessData{
+       width: 390px;
+       height: 230px;
+       overflow-y: scroll;
+       padding-right: 25px;
+   }
+
+   .niceType span ,.wrongType span ,.optType span ,.negativeType span{
+            margin-right: 10px;
+            border: 1px solid #efefef;
+            line-height: 15px;
+            margin-top: 7.5px;
+            padding: 10px;
+            height: 15px;
+            min-width: 80px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: #535353;
+   }
+   .single ,.Choice ,.specify ,.pick{
+            margin-right: 10px;
+            border: 1px solid #efefef;
+            line-height: 15px;
+            padding: 10px;
+            height: 15px;
+            min-width: 80px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            background: #eee;
+   }
+   .displayName{
+        width: 100%;
+        border: 1px solid #eee;
+        height: 35px;
+   }
+   
+   .tagName ,.badName ,.revealName ,.indicationName{
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            text-indent: 1rem;
+            padding: 10px 0px 10px 0px;
+        }
+    .tagName:empty::before ,.badName:empty::before ,.revealName:empty::before ,.indicationName:empty::before{
+        color:lightgrey;
+        content:attr(placeholder);
+    }
+
+    .info{
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          font-family: zy;
+          padding-top: 20px;
+          font-weight: 700;
+    }
+
+    .info p{
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        color: #535353;
+    }
+    .info hr{
+        width: calc(100% - 100px);
+        height: 1px;
+        margin-top: 20px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        display: inline-block;
+    }
+
+    .give{
+      width: 100%;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .give input{
+        width: 92%;
+        height: 45px;
+        line-height: 45px;
+        border: 1px solid #dcdfe6;
+        text-indent: 1rem;
+    }
+    .couponsList {
+            width: 92%;
+            height: auto;
+            float: left;
+    }
+    .addul {
+            width: 100%;
+            height: 120px;
+            border:1px solid #F0F0F0;
+            display: flex;
+            margin-bottom:15px;
+            position: relative;
+          li {
+            padding-left: 20px;
+            width: 50%;
+           }
+    }
+    .voucher{
+             padding-left: 20px;
+              padding-top: 20px;
+              width: 50%;
+    }
+    .voucher select{
+         width: 100%;
+        height: 45px;
+        border-radius: 0px;
+    }
+    .number{
+        position: relative;
+        padding: 20px;
+        width: 46%; 
+    }
+    .number input{
+            width: 100%;
+            height: 43px;
+            border: 1px solid #a9a9a9;
+            margin-top: 10px;
+            text-indent: 2em;
+    }
+    .addCoupons{
+        width: 75px;
+        height: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: underline;
+        color: rgb(255, 74, 74);
+        cursor: pointer;
+    }
+
+    .holdData{
+            width: 120px;
+            height: 40px;
+            font-family: xh;
+            background: rgb(83, 83, 83);
+            color: rgb(255, 255, 255);
+            border: none;
+            margin-top: 40px;
+            border: none;
+            margin-left: 150px;
+    }
+
+.select2-container--default .select2-selection--single {
+    
+    border-radius: 0px!important;
+}
+.select2-container .select2-selection--single {
+    height: 45px!important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 45px!important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 45px!important;
+}

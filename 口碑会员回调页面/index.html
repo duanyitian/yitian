@@ -1,0 +1,38 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付宝回�?/title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+</head>
+<body>
+  <h1>
+    <div id = "alipay" style="line-height: 100px;text-align: center;">
+    </div>
+  </h1>
+</body>
+<script src="js/jquery.2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript">
+    function Configure() {
+          var urls = location.search; //获取url�??"符后的字�?
+            $.ajax({
+          					url : '',
+                    contentType: "application/json",
+                    type: "POST",
+          					data : JSON.stringify(urls),
+          					success : function(data) {
+                      if (data.code == 200) {
+                          $("#alipay").html("开卡成�?);
+                          return;
+                      }else {
+                            $("#alipay").html(data.code+"开卡失�?);
+                            return;
+                      }
+          					}
+          				});
+  };
+    Configure();
+
+</script>
+</html>

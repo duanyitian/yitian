@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <script src="https://static.zhongan.com/website/msxwx/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        define = null;
+        require = null;
+    </script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+        <script type="text/javascript">
+            <!--
+            wx.config({
+                debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                appId: 'wx99a066ed3be3d52e', // 必填，公众号的唯一标识
+                timestamp: 1462521975, // 必填，生成签名的时间戳
+                nonceStr: '9f2c415b-0b8a-48be-ae2c-b4b92a76f494', // 必填，生成签名的随机串
+                signature: '0f978b1b7884092cfb825fed7ea18bc9b9fd3b27',// 必填，签名，见附录1
+                jsApiList: ['chooseImage',
+                    'getLocalImgData',
+                    'uploadImage',
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            });
+
+            wx.ready(function () {
+
+                wx.onMenuShareTimeline({
+
+                    title: '分享标题', // 分享标题
+
+                    link:"分享的url,以http或https开头",
+
+                    imgUrl: "http://images2015.cnblogs.com/blog/340216/201603/340216-20160330130105738-634805951.png" // 分享图标
+
+                });
+
+                // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
+
+                wx.onMenuShareAppMessage({
+
+                    title: '分享标题', // 分享标题
+
+                    desc: "分享描述", // 分享描述
+
+                    link:"分享的url,以http或https开头",
+
+                    imgUrl: "http://images2015.cnblogs.com/blog/340216/201603/340216-20160330130105738-634805951.png", // 分享图标
+
+                    type: 'link', // 分享类型,music、video或link，不填默认为link
+
+                });
+
+            });
+
+
+            function uploadImage(img, localId){
+
+                wx.uploadImage({
+                    localId: localId, // 需要上传的图片的本地ID，由chooseImage接口获得
+                    isShowProgressTips: 1, // 默认为1，显示进度提示
+                    success: function (res) {
+                        var serverId = res.serverId; // 返回图片的服务器端ID
+                        if(!serverId){
+                            show("服务器累了,请稍后再试");
+                            return;
+                        }
+                        img.attr("serverId", serverId);
+                        img.attr("localId", localId);
+                        img.addClass("pad_0");
+
+                    }
+                });
+            }
+
+            function chooseImage(img){
+                wx.chooseImage({
+                    count: 1, // 默认9
+                    sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有 original, compressed
+                    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                    success: function (res) {
+                        var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                        getLocalImg(img, localIds[0]);
+                        uploadImage(img, localIds[0]);
+                    }
+                });
+            }
+
+            function getLocalImgData(img, localId) {
+                wx.getLocalImgData({
+                    localId: localId, // 图片的localID
+                    success: function (res) {
+                        var localData = res.localData; // localData是图片的base64数据，可以用img标签显示
+                        img.find("img").attr("src",localData);
+                    }
+
+                });
+            }
+
+            function getLocalImg(img, localId) {
+                var u = navigator.userAgent;
+                var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端
+                if (isAndroid) {
+                    img.find("img").attr("src",localId);
+                } else {
+                    getLocalImgData(img, localId);
+                }
+            }
+
+
+            //-->
+        </script>
+
+</head>
+<body>
+
+<button id="add">点击添加图片</button>
+
+<div id="addPic">
+    <img src="" alt="">
+</div>
+
+<script>
+    $("#add").click(function(){
+        var addPic = $("#addPic");
+        chooseImage(addPic);
+    })
+</script>
+</body>
+</html>

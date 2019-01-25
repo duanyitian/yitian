@@ -1,0 +1,27 @@
+/**
+重置Layer CSS 样式
+*/
+
+.layui-layer-msg {
+  background: rgba(0,0,0,.7);
+  border: none;
+  border-radius: 10px;
+}
+.layui-layer-dialog .layui-layer-content {
+  color: #fff;
+  text-align: center;
+}
+.layui-layer-ico {
+  background: url(icon.png) no-repeat;
+}
+
+.layui-layer-ico2 {
+  background-position: -93px 0;
+}
+
+.layui-layer-ico1 {
+  background-position: -46px 0;
+}
+.layui-layer-msg .layui-layer-padding{padding:10px;}
+.layui-layer-dialog .layui-layer-content .layui-layer-ico{ position:static; text-align:center; margin:0 auto;margin-bottom:8px; display: block;}
+.layui-layer-dialog .layui-layer-content .layu-yirenz{height:40px; line-height:40px; margin-left:8px;}

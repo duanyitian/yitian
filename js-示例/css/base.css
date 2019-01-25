@@ -1,0 +1,482 @@
+@charset "utf-8";
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Arial", "Microsoft YaHei";
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #FFF;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+i {
+    font-style: normal;
+}
+
+img {
+    border: none;
+}
+
+input, p, dl, dd, dt, sub, sup, a {
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+a:focus {
+    outline: none;
+}
+
+.main {
+    width: 100%;
+    height: 667px;
+}
+
+.main img:first-child {
+    width: 100%;
+    height: 667px;
+    position: absolute;
+    z-index: -20;
+}
+
+.main img:nth-child(2) {
+    width: 100%;
+    height: 667px;
+    position: absolute;
+    z-index: -19;
+}
+
+.main img:nth-child(3) {
+    width: 100%;
+    height: 492px;
+    position: absolute;
+    z-index: -18;
+    margin-top: 112px;
+}
+
+.main img:nth-child(4), .main img:nth-child(5) {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 0;
+    margin-top: 75px;
+    display: block;
+    margin-left: 137.5px;
+    margin-right: 137.5px;
+}
+
+.main img:nth-child(5) {
+    display: none;
+}
+
+.main img:nth-child(6) {
+    width: 250px;
+    margin-left: 62.5px;
+    margin-top: 59.5px;
+    z-index: -16;
+}
+
+.main img:nth-child(7) {
+    width: 62.5px;
+    margin-left: 156.25px;
+    margin-top: 32px;
+    z-index: -15;
+}
+
+.main img:nth-child(8) {
+    width: 75px;
+    margin-left: 200px;
+    ;
+    margin-top: 10px;
+    z-index: -15;
+}
+
+.main img:nth-child(9) {
+    width: 75px;
+    margin-left: 100px;
+    margin-top: -40px;
+    z-index: -15;
+}
+
+.main img:nth-child(10) {
+    display: block;
+    width: 75px;
+    ;
+    margin-left: 87.5px;
+    ;
+    margin-top: 30px;
+    z-index: -15;
+}
+
+.main img:nth-child(11) {
+    display: block;
+    width: 75px;
+    margin-left: 235px;
+    margin-top: -70px;
+    ;
+    z-index: -15;
+}
+
+.main img:nth-child(12), .main img:nth-child(13) {
+    width: 150px;
+    margin-left: 25px;
+    margin-top: 85px;
+    z-index: -15;
+}
+
+.main img:nth-child(14) {
+    display: block;
+    width: 75px;
+    margin-left: 290.5px;
+    margin-top: -555px;
+    z-index: -15;
+}
+
+.main img:nth-child(15) {
+    display: block;
+    width: 50px;
+    margin-left: 220.5px;
+    margin-top: 100px;
+    z-index: -15;
+    opacity: 0;
+}
+
+.main img:nth-child(16) {
+    display: block;
+    width: 50px;
+    margin-left: 275px;
+    margin-top: 45px;
+    z-index: -15;
+    opacity: 0;
+}
+
+.main img:nth-child(17) {
+    display: block;
+    width: 50px;
+    margin-left: 175px;
+    z-index: -15;
+    opacity: 0;
+}
+
+.main img:nth-child(18) {
+    display: block;
+    width: 50px;
+    margin-left: 160px;
+    z-index: -15;
+    opacity: 0;
+    margin-top: 55px;
+}
+
+.main img:nth-child(19) {
+    display: block;
+    width: 50px;
+    margin-left: 310px;
+    margin-top: -25px;
+    z-index: -15;
+    opacity: 0;
+}
+
+.step1 {
+    width: 100%;
+    height: 375px;
+    display: none;
+    margin-top: 75px;
+    background: url('../images/s1.png');
+    background-size: 100% 100%;
+}
+
+.step2 {
+    width: 100%;
+    height: 355px;
+    display: none;
+    margin-top: 75px;
+    background: url('../images/s2.png');
+    background-size: 100% 100%;
+}
+
+.step5 {
+    width: 100%;
+    height: 375px;
+    display: none;
+    margin-top: 75px;
+    background: url('../images/s5.png');
+    background-size: 100% 100%;
+}
+
+.step3 {
+    width: 100%;
+    height: 655px;
+    display: none;
+    background: url('../images/s3.png');
+    background-size: 100% 100%;
+    margin-top: -30px;
+}
+
+.step4 {
+    width: 100%;
+    height: 375px;
+    display: none;
+    margin-top: 75px;
+    background: url('../images/s4.png');
+    background-size: 100% 100%;
+}
+
+.step1>a:nth-child(1)>img {
+    width: 45px;
+    margin-top: 105px;
+    margin-left: 325px;
+}
+
+.step3>a:nth-child(2)>img {
+    width: 150px;
+    position: absolute;
+    margin-top: -108px;
+    margin-left: 105px;
+}
+
+.step4>a:nth-child(1)>img {
+    width: 45px;
+    margin-top: 110px;
+    margin-left: 330px;
+}
+
+.step1>a:nth-child(2)>img {
+    width: 150px;
+    margin-top: 125px;
+    margin-left: 120px;
+}
+
+.step2>a:nth-child(1)>img {
+    width: 45px;
+    position: absolute;
+    margin-top: 85px;
+    margin-left: 325px;
+}
+
+.step5 a:last-child img {
+    width: 45px;
+    margin-top: 114px;
+    margin-left: 325px;
+}
+
+.step3>a:nth-child(1)>img {
+    width: 45px;
+    margin-top: 45px;
+    margin-left: 325px;
+}
+
+.step4>a:nth-child(2)>img {
+    width: 100px;
+    margin-top: 70px;
+    margin-left: 205px;
+}
+
+.step4>a:nth-child(3)>img {
+    width: 150px;
+    margin-top: 15px;
+    margin-left: 116px;
+}
+
+.step3 div div {
+    width: 75px;
+    height: 20px;
+    display: inline-block;
+}
+
+.step3>div div:first-child {
+    margin-left: 36px;
+}
+
+.step3>div div:nth-child(2) {
+    margin-left: 28px;
+}
+
+.step3>div div:nth-child(3) {
+    margin-left: 24px;
+}
+
+.step3>div:nth-child(2) {
+    margin-top: 328px;
+}
+
+.step3>div:nth-child(3) {
+    margin-top: 18px;
+}
+
+.step3>div:nth-child(4) {
+    margin-top: 20px;
+}
+
+.step3 div div img {
+    position: absolute;
+    width: 12.5px;
+    height: 12.5px;
+    display: none;
+    margin-top: 4px;
+}
+
+.step3 a:last-child>img {
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 112.5px;
+}
+
+.Walkthrough, .Prompt {
+    display: none;
+    width: 100%;
+    height: 500px;
+}
+
+.Walkthrough img:first-child, .Prompt img:first-child {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.Prompt img:first-child {
+    margin-top: 25px;
+}
+
+.Walkthrough img:nth-child(2), .Prompt img:nth-child(2) {
+    width: 125px;
+    position: absolute;
+    z-index: 999;
+    margin-top: -112.5px;
+    display: block;
+    margin-left: 200px;
+}
+
+.layui-layer {
+    background: none !important;
+}
+
+.Redenvelope1, .Redenvelope2, .Redenvelope3, .Redenvelope4, .Redenvelope5, .lastredpacke {
+    display: none;
+    width: 100%;
+    height: 500px;
+    position: fixed;
+}
+
+.Redenvelope1 img:first-child, .Redenvelope2 img:first-child, .Redenvelope3 img:first-child, .Redenvelope4 img:first-child, .Redenvelope5 img:first-child, .lastredpacke img:first-child {
+    width: 85%;
+    margin-left: 30px;
+}
+
+.Redenvelope1 img:nth-child(3), .Redenvelope2 img:nth-child(3), .Redenvelope3 img:nth-child(3), .Redenvelope4 img:nth-child(3), .Redenvelope5 img:nth-child(3) {
+    width: 450px;
+    position: absolute;
+    z-index: -10;
+    margin-top: 150px;
+    margin-left: -400px;
+}
+
+.Redenvelope1 img:nth-child(2), .Redenvelope2 img:nth-child(2), .Redenvelope3 img:nth-child(2), .Redenvelope4 img:nth-child(2), .Redenvelope5 img:nth-child(2), .lastredpacke img:nth-child(2) {
+    width: 60px;
+    position: absolute;
+    z-index: 999;
+    margin-top: -400px;
+    display: block;
+    margin-left: 300px;
+}
+
+.lastredpacke img:nth-child(3) {
+    width: 400px;
+    position: absolute;
+    z-index: -10;
+    margin-top: 130px;
+    margin-left: -380px;
+}
+
+.add1 {
+    display: none;
+    opacity: 1;
+    position: absolute;
+    margin-top: -575px;
+    width: 70px;
+    margin-left: 300px;
+}
+
+.deer {
+    height: 100px;
+    position: absolute;
+    margin-top: -440px;
+    margin-left: 375px;
+    display: none;
+    z-index: 999;
+}
+
+.right {
+    display: none;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.right img:nth-child(1) {
+    width: 100%;
+}
+
+.right img:nth-child(2) {
+    width: 100%;
+    position: absolute;
+    margin-top: -350px;
+}
+
+.wrong {
+    display: none;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.wrong img:nth-child(1) {
+    width: 100%;
+}
+
+.wrong img:nth-child(2) {
+    width: 100%;
+    position: absolute;
+    margin-top: -350px;
+}
+.backBlack{
+    display: block;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background: black;
+    top: 0;
+    opacity:0.35;
+    display: none;
+    z-index: 998;
+}
